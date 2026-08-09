@@ -35,7 +35,7 @@ body{
 }
 .logo-full{
   display:block;
-  width:clamp(210px,26vw,430px);
+  width:clamp(52px,6.5vw,108px);
   max-width:100%;
   height:auto;
 }
@@ -74,7 +74,7 @@ footer{
 @media (max-width:700px){
   .page{padding:28px 24px 26px;}
   .brand{margin-top:68px;}
-  .logo-full{width:min(68vw,340px);}
+  .logo-full{width:min(17vw,85px);}
   .hero{align-self:start;padding-top:76px;}
   h1{font-size:clamp(54px,17vw,88px);line-height:.9;}
   .sub{font-size:19px;}
