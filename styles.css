@@ -33,31 +33,12 @@ body{
 .brand{
   margin-top:clamp(68px,10vh,128px);
 }
-.brand-lockup{
-  display:flex;
-  align-items:flex-end;
-  gap:clamp(12px,1.25vw,22px);
-}
-.logo-icon{
-  width:clamp(62px,6vw,104px);
+.logo-full{
+  display:block;
+  width:clamp(260px,44vw,720px);
+  max-width:100%;
   height:auto;
-  flex:0 0 auto;
 }
-.wordmark{
-  display:inline-block;
-  font-weight:800;
-  font-size:clamp(56px,8vw,118px);
-  letter-spacing:-.065em;
-  line-height:.85;
-}
-.eye{
-  transform-box:fill-box;
-  transform-origin:center;
-  animation:blink 9.6s infinite;
-}
-.eye-1{animation-delay:.06s}
-.eye-2{animation-delay:.1s}
-.eye-3{animation-delay:.14s}
 .hero{
   align-self:center;
   padding:clamp(44px,7vh,90px) 0;
@@ -90,36 +71,11 @@ footer{
   font-size:clamp(11px,1vw,15px);
   padding-top:28px;
 }
-@keyframes blink{
-  0%, 27%, 29%, 71%, 73%, 74%, 76%, 100%{transform:scaleY(1)}
-  28%, 72%, 75%{transform:scaleY(.12)}
-}
-@media (prefers-reduced-motion: reduce){
-  .eye{animation:none}
-}
 @media (max-width:700px){
-  .page{
-    padding:28px 24px 26px;
-  }
-  .brand{
-    margin-top:68px;
-  }
-  .brand-lockup{
-    gap:12px;
-    align-items:flex-end;
-  }
-  .logo-icon{
-    width:60px;
-  }
-  .hero{
-    align-self:start;
-    padding-top:76px;
-  }
-  h1{
-    font-size:clamp(54px,17vw,88px);
-    line-height:.9;
-  }
-  .sub{
-    font-size:19px;
-  }
+  .page{padding:28px 24px 26px;}
+  .brand{margin-top:68px;}
+  .logo-full{width:min(82vw,460px);}
+  .hero{align-self:start;padding-top:76px;}
+  h1{font-size:clamp(54px,17vw,88px);line-height:.9;}
+  .sub{font-size:19px;}
 }
