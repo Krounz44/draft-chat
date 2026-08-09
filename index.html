@@ -2,44 +2,86 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Drafty — A conversation, not a record.</title>
   <meta name="description" content="Drafty. Private, live conversations. No history. No randoms. Just the moment.">
   <meta property="og:title" content="Drafty">
   <meta property="og:description" content="A conversation, not a record.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://draft-chat.com/">
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    html, body {
+      margin: 0;
+      width: 100%;
+      min-height: 100%;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    #viewport {
+      position: relative;
+      width: 100vw;
+      height: 100svh;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    #stage {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1440px;
+      height: 900px;
+      transform-origin: 0 0;
+      background: #fff;
+    }
+
+    #drafty-page {
+      display: block;
+      width: 1440px;
+      height: 900px;
+      border: 0;
+      background: #fff;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { scroll-behavior: auto !important; }
+    }
+  </style>
 </head>
 <body>
-  <main class="page">
-    <header class="top">
-      <div class="meta">
-        <div>PAGE 001</div>
-        <div>LIVE UNTIL LAUNCH</div>
-      </div>
-      <div class="dots" aria-label="Drafty">•••</div>
-    </header>
+  <div id="viewport">
+    <div id="stage">
+      <iframe
+        id="drafty-page"
+        src="publication-web-resources/html/publication.html"
+        title="Drafty coming soon">
+      </iframe>
+    </div>
+  </div>
 
-    <section class="brand" aria-label="Drafty logo">
-      <img src="drafty-logo.png?v=3" alt="Drafty" class="logo-full">
-    </section>
+  <script>
+    (function () {
+      const DESIGN_W = 1440;
+      const DESIGN_H = 900;
+      const stage = document.getElementById('stage');
 
-    <section class="hero">
-      <h1>A conversation,<br>not a record.</h1>
-      <p class="sub">
-        Private, live conversations.<br>
-        No history. No randoms. Just the moment.
-      </p>
-      <div class="launch">
-        <strong>Launching soon.</strong><br>
-        <a href="https://www.instagram.com/draftychat/" rel="noopener">@draftychat</a>
-      </div>
-    </section>
+      function fitPage() {
+        const vw = window.innerWidth;
+        const vh = window.innerHeight;
 
-    <footer>
-      <span>© 2026 Drafty</span>
-    </footer>
-  </main>
+        // Preserve the exact InDesign composition and fit it completely on screen.
+        const scale = Math.min(vw / DESIGN_W, vh / DESIGN_H);
+
+        stage.style.transform = `scale(${scale})`;
+        stage.style.left = Math.max(0, (vw - DESIGN_W * scale) / 2) + 'px';
+        stage.style.top = Math.max(0, (vh - DESIGN_H * scale) / 2) + 'px';
+      }
+
+      window.addEventListener('resize', fitPage, { passive: true });
+      window.addEventListener('orientationchange', fitPage, { passive: true });
+      fitPage();
+    })();
+  </script>
 </body>
 </html>
