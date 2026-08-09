@@ -1,0 +1,125 @@
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:#fff;color:#000}
+body{
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+.page{
+  min-height:100svh;
+  padding:clamp(28px,5vw,78px);
+  display:grid;
+  grid-template-rows:auto auto 1fr auto;
+  gap:0;
+}
+.top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+}
+.meta{
+  font-family:"PT Mono","Andale Mono",monospace;
+  font-size:clamp(11px,1.1vw,16px);
+  line-height:1.35;
+  letter-spacing:.035em;
+}
+.dots{
+  font-family:Arial,sans-serif;
+  font-weight:700;
+  font-size:clamp(18px,2vw,28px);
+  line-height:1;
+  letter-spacing:.12em;
+}
+.brand{
+  margin-top:clamp(68px,10vh,128px);
+}
+.brand-lockup{
+  display:flex;
+  align-items:flex-end;
+  gap:clamp(12px,1.25vw,22px);
+}
+.logo-icon{
+  width:clamp(62px,6vw,104px);
+  height:auto;
+  flex:0 0 auto;
+}
+.wordmark{
+  display:inline-block;
+  font-weight:800;
+  font-size:clamp(56px,8vw,118px);
+  letter-spacing:-.065em;
+  line-height:.85;
+}
+.eye{
+  transform-box:fill-box;
+  transform-origin:center;
+  animation:blink 9.6s infinite;
+}
+.eye-1{animation-delay:.06s}
+.eye-2{animation-delay:.1s}
+.eye-3{animation-delay:.14s}
+.hero{
+  align-self:center;
+  padding:clamp(44px,7vh,90px) 0;
+}
+h1{
+  margin:0;
+  max-width:1100px;
+  font-size:clamp(58px,9.3vw,150px);
+  line-height:.88;
+  letter-spacing:-.075em;
+  font-weight:800;
+}
+.sub{
+  margin:clamp(26px,3vw,42px) 0 0;
+  font-size:clamp(18px,2vw,31px);
+  line-height:1.22;
+  letter-spacing:-.025em;
+}
+.launch{
+  margin-top:clamp(38px,5vw,66px);
+  font-size:clamp(15px,1.45vw,22px);
+  line-height:1.35;
+}
+.launch a{
+  color:#000;
+  text-decoration:none;
+}
+.launch a:hover{text-decoration:underline}
+footer{
+  font-size:clamp(11px,1vw,15px);
+  padding-top:28px;
+}
+@keyframes blink{
+  0%, 27%, 29%, 71%, 73%, 74%, 76%, 100%{transform:scaleY(1)}
+  28%, 72%, 75%{transform:scaleY(.12)}
+}
+@media (prefers-reduced-motion: reduce){
+  .eye{animation:none}
+}
+@media (max-width:700px){
+  .page{
+    padding:28px 24px 26px;
+  }
+  .brand{
+    margin-top:68px;
+  }
+  .brand-lockup{
+    gap:12px;
+    align-items:flex-end;
+  }
+  .logo-icon{
+    width:60px;
+  }
+  .hero{
+    align-self:start;
+    padding-top:76px;
+  }
+  h1{
+    font-size:clamp(54px,17vw,88px);
+    line-height:.9;
+  }
+  .sub{
+    font-size:19px;
+  }
+}
