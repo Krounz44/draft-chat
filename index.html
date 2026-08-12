@@ -2,86 +2,301 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Drafty — A conversation, not a record.</title>
-  <meta name="description" content="Drafty. Private, live conversations. No history. No randoms. Just the moment.">
-  <meta property="og:title" content="Drafty">
-  <meta property="og:description" content="A conversation, not a record.">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Drafty — Private live conversations. No chat history.</title>
+  <meta name="description" content="Drafty is a private live conversation app for people you choose. Buzz someone, take turns one thought at a time, and leave no chat history to scroll back through.">
+  <link rel="canonical" href="https://draftychat.com/">
+  <meta name="theme-color" content="#ffffff">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://draft-chat.com/">
-  <style>
-    html, body {
-      margin: 0;
-      width: 100%;
-      min-height: 100%;
-      background: #fff;
-      overflow: hidden;
-    }
-
-    #viewport {
-      position: relative;
-      width: 100vw;
-      height: 100svh;
-      overflow: hidden;
-      background: #fff;
-    }
-
-    #stage {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 1440px;
-      height: 900px;
-      transform-origin: 0 0;
-      background: #fff;
-    }
-
-    #drafty-page {
-      display: block;
-      width: 1440px;
-      height: 900px;
-      border: 0;
-      background: #fff;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      * { scroll-behavior: auto !important; }
-    }
-  </style>
+  <meta property="og:title" content="Drafty — A conversation, not a record.">
+  <meta property="og:description" content="Private live conversations with people you choose. Buzz. Draft. Gone.">
+  <meta property="og:url" content="https://draftychat.com/">
+  <meta property="og:image" content="https://draftychat.com/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Drafty","applicationCategory":"SocialNetworkingApplication","operatingSystem":"iOS","description":"A private live conversation app for people you choose. One person writes at a time, each new Draft replaces the previous one, and there is no conventional chat history.","url":"https://draftychat.com/","email":"hello@draftychat.com"}
+  </script>
 </head>
 <body>
-  <div id="viewport">
-    <div id="stage">
-      <iframe
-        id="drafty-page"
-        src="publication-web-resources/html/publication.html"
-        title="Drafty coming soon">
-      </iframe>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <nav class="nav" aria-label="Primary navigation">
+    <a class="brand" href="index.html" aria-label="Drafty home"><img src="assets/drafty-logo.png" alt="Drafty"></a>
+    <button class="menu-button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <div class="nav-links" id="nav-links">
+      <a href="#how">How it works</a>
+      <a href="#privacy">Privacy</a>
+      <a href="blog/index.html">Blog</a>
+      <a class="social-link" href="https://www.instagram.com/draftychat/" target="_blank" rel="noopener noreferrer" aria-label="Drafty on Instagram">
+        <img src="assets/instagram.svg" alt=""><span>@draftychat</span>
+      </a>
+      <a class="social-link" href="https://www.tiktok.com/@draftychat" target="_blank" rel="noopener noreferrer" aria-label="Drafty on TikTok">
+        <img src="assets/tiktok.svg" alt=""><span>@draftychat</span>
+      </a>
+      <a class="nav-contact" href="mailto:hello@draftychat.com">hello@draftychat.com</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="container hero-grid refined-hero-grid">
+      <div class="hero-stage">
+        <img src="assets/reply-hero.png" alt="Drafty live Draft screen showing a message and the Write Reply button" width="1536" height="2048" fetchpriority="high">
+      </div>
+      <div>
+        <p class="eyebrow">Private live conversations</p>
+        <h1>Buzz.<br>Draft.<br>Gone.</h1>
+        <p class="hero-copy">Drafty is for talking to people you actually know. Invite a Drafty, Buzz when you want to talk, and take turns one thought at a time. Each new Draft replaces the last. No history. No randoms. Just the conversation.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#how">See how it works</a>
+          <a class="btn btn-secondary" href="mailto:hello@draftychat.com">Say hello</a>
+        </div>
+        <div class="app-store-badge-block" aria-label="Drafty App Store listing coming soon">
+          <img class="app-store-badge" src="assets/app-store-badge-custom.png" alt="Download on the App Store">
+          <span class="app-store-kicker">Coming soon</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark statement-section">
+    <div class="container section-inner">
+      <p class="statement">Your best conversations probably never needed a search function. <span class="muted">Drafty agrees.</span></p>
+    </div>
+  </section>
+
+  <section class="section" id="how">
+    <div class="container section-inner">
+      <div class="how-intro">
+        <div class="how-copy">
+          <p class="eyebrow">How Drafty works</p>
+          <h2 class="section-title">A very small social network.<br>On purpose.</h2>
+          <p class="how-lead">The structure is simple: choose your people, Buzz when you want to talk, write one thought at a time, and let the conversation disappear instead of turning into an archive.</p>
+        </div>
+        <div class="icon-strip icon-strip-opposite" aria-label="Drafty flow overview">
+          <div class="icon-card">
+            <img src="assets/icon-drafties.svg" alt="">
+            <strong>Drafties</strong>
+            <span>Only people you choose.</span>
+          </div>
+          <div class="icon-card">
+            <img src="assets/icon-buzz.svg" alt="">
+            <strong>Buzz</strong>
+            <span>Got something to say? Buzz.</span>
+          </div>
+          <div class="icon-card">
+            <img src="assets/icon-draft.svg" alt="">
+            <strong>Draft</strong>
+            <span>A conversation, not a record.</span>
+          </div>
+          <div class="icon-card">
+            <img src="assets/icon-start.svg" alt="">
+            <strong>Gone</strong>
+            <span>Nothing hanging around forever.</span>
+          </div>
+        </div>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <h3>Invite</h3>
+          <p>Add someone you know. They become a Drafty only after they accept. There is no random discovery feed hiding around the corner.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <h3>Buzz</h3>
+          <p>Got something to say? Buzz them. A Buzz contains no message text. It simply means you want to talk, and the person who Buzzes writes first.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <h3>Draft</h3>
+          <p>One person writes at a time. The other person reads the current Draft, then writes a reply when it is their turn.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <h3>Replace</h3>
+          <p>The reply replaces the Draft that came before it. There is nothing to scroll back to later. Less archaeology. More conversation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark">
+    <div class="container section-inner two-col feature-split feature-reverse">
+      <div class="copy">
+        <p class="eyebrow">People, not an audience</p>
+        <h2>Only your Drafties can Buzz you.</h2>
+        <p>Your Drafties are people you invited, or people whose invitation you accepted. That is the social part: a deliberate circle, not a room full of strangers.</p>
+        <p class="aside">Drafty currently uses email to send invitations, but the product idea is simpler than the delivery method: you choose who becomes a Drafty.</p>
+      </div>
+      <div class="phone-art phone-art-xl">
+        <img src="assets/invite-framed.png" alt="Drafty invitations screen showing an incoming invitation and a pending invitation" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container section-inner two-col feature-split">
+      <div class="phone-art phone-art-xl">
+        <img src="assets/buzz-framed.png" alt="Drafty Buzz screen showing a Buzz sent to another Drafty" loading="lazy">
+      </div>
+      <div class="copy">
+        <p class="eyebrow">The Buzz</p>
+        <h2>A notification with commitment issues.</h2>
+        <p>A Buzz is not a hidden message preview. It says one thing: someone wants to start a live Draft with you. Accept it and the person who Buzzed writes first.</p>
+        <p class="aside">Buzzes expire automatically if they are not answered. No abandoned “hey” sitting there for six months.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark">
+    <div class="container section-inner two-col feature-split feature-reverse">
+      <div class="copy">
+        <p class="eyebrow">One thought at a time</p>
+        <h2>No pile-up. No scrollback.</h2>
+        <p>Drafty keeps the live conversation focused on what is being said now. One person writes, the other reads, then the reply replaces the previous Draft.</p>
+        <div class="feature-band">
+          <div class="feature-cell">
+            <h3>No history</h3>
+            <p>Drafty does not provide a conventional message-history view.</p>
+          </div>
+          <div class="feature-cell">
+            <h3>60 seconds</h3>
+            <p>Switch apps briefly and you have a 60-second grace period to return to the same Draft.</p>
+          </div>
+          <div class="feature-cell">
+            <h3>Your turn</h3>
+            <p>Only one person writes at a time, so there is no typing over each other.</p>
+          </div>
+        </div>
+      </div>
+      <div class="phone-art phone-art-xl">
+        <img src="assets/waiting-framed.png" alt="Drafty live session waiting for the other Drafty to write first" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="privacy">
+    <div class="container section-inner">
+      <p class="eyebrow">Privacy and safety</p>
+      <h2 class="section-title">Temporary by design.<br>Not magically uncopyable.</h2>
+      <div class="capture">
+        <div>
+          <strong>Capture detected?<br>Draft over.</strong>
+          <p>When iOS reports a screenshot, screen recording, mirroring, or screen sharing during an active Draft, Drafty ends that Draft automatically.</p>
+        </div>
+        <div>
+          <strong>No fake promises.</strong>
+          <p>Drafty cannot stop a screenshot that has already happened or guarantee every form of capture will be detected. If something must never be retained, do not put it on a screen.</p>
+        </div>
+      </div>
+      <div class="feature-band privacy-band">
+        <div class="feature-cell">
+          <h3>Report</h3>
+          <p>Users can report another Drafty for safety and abuse review.</p>
+        </div>
+        <div class="feature-cell">
+          <h3>Block</h3>
+          <p>Block a Drafty to stop invitations, Buzzes, and new Drafts between you.</p>
+        </div>
+        <div class="feature-cell">
+          <h3>Delete</h3>
+          <p>Account deletion is available inside Settings in the app.</p>
+        </div>
+      </div>
+      <div style="margin-top:34px"><a href="privacy/index.html">Read the full Privacy Policy</a></div>
+    </div>
+  </section>
+
+  <section class="section section-dark" id="faq">
+    <div class="container section-inner">
+      <p class="eyebrow">The useful questions</p>
+      <h2 class="section-title">FAQ, minus the 47 questions nobody asked.</h2>
+      <div class="faq">
+        <details>
+          <summary>Does Drafty keep my chat history?</summary>
+          <p>No conventional chat history is available in Drafty. Live Draft text is temporary and follows the active session lifecycle; each new contribution replaces what came before.</p>
+        </details>
+        <details>
+          <summary>Can random people message me?</summary>
+          <p>No. Drafty is built around accepted Drafty relationships. You invite someone, or accept their invitation, before you can Buzz each other.</p>
+        </details>
+        <details>
+          <summary>What happens if I leave the app?</summary>
+          <p>A brief app switch gets a 60-second grace period. Return within that time and the same Draft resumes. Stay away longer and the Draft ends.</p>
+        </details>
+        <details>
+          <summary>Does Drafty prevent screenshots?</summary>
+          <p>No app can make that promise. Drafty ends the active Draft when iOS reports a screenshot or active screen capture, but it cannot undo a capture that already happened or guarantee every capture method will be detected.</p>
+        </details>
+        <details>
+          <summary>Is Drafty available on Android?</summary>
+          <p>Drafty is built for iPhone. Android is not part of the current app.</p>
+        </details>
+        <details>
+          <summary>Where do I get help, ask a business question, or just say hello?</summary>
+          <p>Everything goes to one place: <a href="mailto:hello@draftychat.com">hello@draftychat.com</a>.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container section-inner">
+      <p class="eyebrow">From the Drafty blog</p>
+      <h2 class="section-title">Longer thoughts.<br>Ironically.</h2>
+      <div class="blog-grid">
+        <article class="blog-card">
+          <time datetime="2026-08-12">12 Aug 2026</time>
+          <h3>Why Drafty has no chat history</h3>
+          <p>Most messaging products treat every conversation like a document. Drafty starts from a different assumption.</p>
+          <a href="blog/why-drafty-has-no-chat-history/index.html">Read article</a>
+        </article>
+        <article class="blog-card">
+          <time datetime="2026-08-12">12 Aug 2026</time>
+          <h3>What is a Drafty?</h3>
+          <p>No followers. No random discovery. A Drafty is simply someone you deliberately choose to talk to.</p>
+          <a href="blog/what-is-a-drafty/index.html">Read article</a>
+        </article>
+        <article class="blog-card">
+          <time datetime="2026-08-12">12 Aug 2026</time>
+          <h3>What a Buzz actually means</h3>
+          <p>Before a Draft starts, there is a Buzz. It contains no message text and has exactly one job.</p>
+          <a href="blog/what-a-buzz-means/index.html">Read article</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark">
+    <div class="container section-inner cta">
+      <h2>A conversation,<br>not a record.</h2>
+      <p>Drafty is a private live-conversation app for iPhone, built around the people you choose and the moment you are actually in.</p>
+      <a class="btn btn-primary btn-invert" href="mailto:hello@draftychat.com">hello@draftychat.com</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html"><img src="assets/drafty-logo.png" alt="Drafty"></a>
+      <p>© 2026 Drafty. Be here now.</p>
+    </div>
+    <div class="footer-links">
+      <a href="blog/index.html">Blog</a>
+      <a href="privacy/index.html">Privacy</a>
+      <a href="terms/index.html">Terms</a>
+      <a href="mailto:hello@draftychat.com">hello@draftychat.com</a>
     </div>
   </div>
+</footer>
 
-  <script>
-    (function () {
-      const DESIGN_W = 1440;
-      const DESIGN_H = 900;
-      const stage = document.getElementById('stage');
-
-      function fitPage() {
-        const vw = window.innerWidth;
-        const vh = window.innerHeight;
-
-        // Preserve the exact InDesign composition and fit it completely on screen.
-        const scale = Math.min(vw / DESIGN_W, vh / DESIGN_H);
-
-        stage.style.transform = `scale(${scale})`;
-        stage.style.left = Math.max(0, (vw - DESIGN_W * scale) / 2) + 'px';
-        stage.style.top = Math.max(0, (vh - DESIGN_H * scale) / 2) + 'px';
-      }
-
-      window.addEventListener('resize', fitPage, { passive: true });
-      window.addEventListener('orientationchange', fitPage, { passive: true });
-      fitPage();
-    })();
-  </script>
+<script src="script.js"></script>
 </body>
 </html>
