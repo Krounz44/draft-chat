@@ -369,7 +369,7 @@ details p { margin: 0; padding: 0 0 28px; max-width: 840px; color: #333; font-si
 }
 
 
-/* v3 — hero composition correction */
+/* v3 - hero composition correction */
 .refined-hero-grid {
   max-width: 1260px;
   grid-template-columns: minmax(390px, 520px) minmax(480px, 610px);
@@ -441,7 +441,7 @@ details p { margin: 0; padding: 0 0 28px; max-width: 840px; color: #333; font-si
   }
 }
 
-/* v4 — consistent phone scale across homepage */
+/* v4 - consistent phone scale across homepage */
 :root { --drafty-phone-width: 510px; }
 
 .hero-stage img,
@@ -470,7 +470,7 @@ details p { margin: 0; padding: 0 0 28px; max-width: 840px; color: #333; font-si
   :root { --drafty-phone-width: min(82vw, 440px); }
 }
 
-/* v5 — title case labels, social nav, selection inversion, App Store placeholder */
+/* v5 - title case labels, social nav, selection inversion, App Store placeholder */
 .eyebrow {
   text-transform: none;
   letter-spacing: -.01em;
@@ -546,7 +546,7 @@ details p { margin: 0; padding: 0 0 28px; max-width: 840px; color: #333; font-si
   .social-link img { width: 18px; height: 18px; }
 }
 
-/* v6 — proper App Store badge and how-it-works split */
+/* v6 - proper App Store badge and how-it-works split */
 .app-store-badge-block {
   margin-top: 24px;
   display: inline-flex;
@@ -627,7 +627,7 @@ details p { margin: 0; padding: 0 0 28px; max-width: 840px; color: #333; font-si
 }
 
 
-/* v7 — custom App Store badge with coming soon below */
+/* v7 - custom App Store badge with coming soon below */
 .app-store-badge-block {
   margin-top: 24px;
   display: inline-flex;
@@ -648,5 +648,377 @@ details p { margin: 0; padding: 0 0 28px; max-width: 840px; color: #333; font-si
 @media (max-width: 700px) {
   .app-store-badge {
     width: min(100%, 195px);
+  }
+}
+
+/* v9 - lifestyle intro and smaller App Store badge */
+.lifestyle-intro {
+  background: #fff;
+}
+.lifestyle-wrap {
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+.lifestyle-card {
+  position: relative;
+  overflow: hidden;
+  background: #f3f3f3;
+  min-height: 760px;
+}
+.lifestyle-card img {
+  width: 100%;
+  height: 760px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.lifestyle-overlay {
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+  background: rgba(255,255,255,.96);
+  color: #000;
+  padding: 28px 30px 30px;
+  max-width: 520px;
+}
+.lifestyle-overlay h2 {
+  margin: 0;
+  font-size: clamp(46px, 5.2vw, 88px);
+  line-height: .92;
+  letter-spacing: -.06em;
+}
+.lifestyle-overlay p:last-child {
+  margin: 18px 0 0;
+  font-size: clamp(18px, 1.5vw, 24px);
+  line-height: 1.38;
+  letter-spacing: -.02em;
+}
+
+.app-store-badge {
+  width: 172px;
+}
+.app-store-kicker {
+  font-size: 13px;
+}
+
+@media (max-width: 1100px) {
+  .lifestyle-card {
+    min-height: 620px;
+  }
+  .lifestyle-card img {
+    height: 620px;
+  }
+  .lifestyle-overlay {
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
+    max-width: 520px;
+    padding: 24px 24px 26px;
+  }
+}
+
+@media (max-width: 700px) {
+  .lifestyle-wrap {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .lifestyle-card {
+    min-height: 520px;
+  }
+  .lifestyle-card img {
+    height: 520px;
+    object-position: 58% center;
+  }
+  .lifestyle-overlay {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    max-width: none;
+  }
+  .app-store-badge {
+    width: 160px;
+  }
+}
+
+
+/* v10 - full-bleed lifestyle intro, overlay moved right, smaller App Store badge */
+.lifestyle-intro,
+.lifestyle-wrap,
+.lifestyle-card { display: none; }
+
+.lifestyle-intro-fullbleed {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+}
+
+.lifestyle-media {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.lifestyle-media img {
+  width: 100%;
+  height: min(88vh, 980px);
+  min-height: 720px;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+.lifestyle-overlay-right {
+  position: absolute;
+  right: clamp(22px, 4vw, 68px);
+  left: auto;
+  bottom: clamp(22px, 4vw, 54px);
+  max-width: 540px;
+  background: rgba(255,255,255,.96);
+  color: #000;
+  padding: 30px 32px 32px;
+}
+
+.lifestyle-overlay-right h2 {
+  margin: 0;
+  font-size: clamp(48px, 5.2vw, 88px);
+  line-height: .92;
+  letter-spacing: -.06em;
+}
+
+.lifestyle-overlay-right p:last-child {
+  margin: 18px 0 0;
+  font-size: clamp(18px, 1.45vw, 24px);
+  line-height: 1.38;
+  letter-spacing: -.02em;
+}
+
+.app-store-badge {
+  width: 150px;
+}
+
+@media (max-width: 1100px) {
+  .lifestyle-media img {
+    height: 76vh;
+    min-height: 620px;
+  }
+  .lifestyle-overlay-right {
+    right: 24px;
+    bottom: 24px;
+    max-width: 500px;
+    padding: 24px 24px 26px;
+  }
+}
+
+@media (max-width: 700px) {
+  .lifestyle-media img {
+    height: 68vh;
+    min-height: 520px;
+    object-position: 36% center;
+  }
+  .lifestyle-overlay-right {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    max-width: none;
+    padding: 20px 20px 22px;
+  }
+  .app-store-badge {
+    width: 138px;
+  }
+}
+
+
+/* v11 - lifestyle overlay refinement */
+.lifestyle-media img {
+  object-position: center center;
+}
+
+.lifestyle-overlay-right {
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,.82);
+  max-width: 560px;
+  padding: 34px 34px 34px;
+}
+
+.lifestyle-overlay-right .eyebrow {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 8px 0 26px;
+}
+
+.lifestyle-overlay-right p:last-child {
+  line-height: 1.24;
+}
+
+@media (max-width: 1100px) {
+  .lifestyle-overlay-right {
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,.84);
+  }
+}
+
+@media (max-width: 700px) {
+  .lifestyle-overlay-right {
+    top: auto;
+    bottom: 16px;
+    transform: none;
+    background: rgba(255,255,255,.88);
+  }
+
+  .lifestyle-overlay-right .eyebrow {
+    font-size: 18px;
+    margin: 4px 0 18px;
+  }
+
+  .lifestyle-overlay-right p:last-child {
+    line-height: 1.28;
+  }
+}
+
+
+/* v12 - title consistency and tracking refinement */
+.eyebrow {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin: 0 0 26px;
+}
+
+.lifestyle-overlay-right {
+  padding-top: 52px;
+}
+
+.lifestyle-overlay-right .eyebrow {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin: 18px 0 26px;
+}
+
+.lifestyle-overlay-right h2 {
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 700px) {
+  .eyebrow {
+    font-size: 18px;
+    margin: 0 0 18px;
+  }
+
+  .lifestyle-overlay-right {
+    padding-top: 28px;
+  }
+
+  .lifestyle-overlay-right .eyebrow {
+    font-size: 18px;
+    margin: 12px 0 18px;
+  }
+}
+
+/* v15 - ONLY unify the small section labels. Do not alter main headline hierarchy. */
+:root {
+  --drafty-kicker-size-fixed: 20px;
+  --drafty-kicker-weight-fixed: 700;
+  --drafty-kicker-leading-fixed: 1.1;
+  --drafty-kicker-tracking-fixed: -0.02em;
+  --drafty-kicker-gap-fixed: 26px;
+}
+
+/* Exact reference: "One thought at a time". Apply identically everywhere. */
+main .eyebrow,
+main .copy .eyebrow,
+main .how-copy .eyebrow,
+main .lifestyle-overlay-right .eyebrow,
+main #privacy .eyebrow,
+main #faq .eyebrow {
+  font-size: var(--drafty-kicker-size-fixed) !important;
+  font-weight: var(--drafty-kicker-weight-fixed) !important;
+  line-height: var(--drafty-kicker-leading-fixed) !important;
+  letter-spacing: var(--drafty-kicker-tracking-fixed) !important;
+  text-transform: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  margin-bottom: var(--drafty-kicker-gap-fixed) !important;
+}
+
+/* Lifestyle label sits lower because the BOX has more top padding -
+   the label itself keeps the exact same typography and title gap. */
+main .lifestyle-overlay-right {
+  padding-top: 52px !important;
+}
+main .lifestyle-overlay-right .eyebrow {
+  margin-top: 0 !important;
+}
+
+/* Preserve the requested -20 tracking on the lifestyle headline. */
+main .lifestyle-overlay-right h2 {
+  letter-spacing: -0.02em !important;
+}
+
+@media (max-width: 700px) {
+  :root {
+    --drafty-kicker-size-fixed: 18px;
+    --drafty-kicker-gap-fixed: 18px;
+  }
+  main .lifestyle-overlay-right {
+    padding-top: 28px !important;
+  }
+}
+
+
+/* v17 - larger how-it-works icons aligned to the opposite side */
+.icon-strip-opposite .icon-card {
+  padding: 34px 34px 30px;
+}
+
+.icon-strip-opposite .icon-card img {
+  width: 108px;
+  height: 108px;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.icon-strip-opposite .icon-card strong {
+  margin-top: 34px;
+}
+
+@media (max-width: 700px) {
+  .icon-strip-opposite .icon-card img {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+
+/* v18 - icons fill the upper card space */
+.icon-strip-opposite .icon-card {
+  padding: 28px 30px 30px;
+}
+
+.icon-strip-opposite .icon-card img {
+  width: 176px !important;
+  height: 176px !important;
+  max-width: 58%;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: 0;
+  margin-top: 0;
+}
+
+.icon-strip-opposite .icon-card strong {
+  margin-top: 22px;
+}
+
+@media (max-width: 700px) {
+  .icon-strip-opposite .icon-card img {
+    width: 142px !important;
+    height: 142px !important;
+    max-width: 52%;
   }
 }

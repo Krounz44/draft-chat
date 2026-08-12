@@ -3,12 +3,12 @@
 Static launch-ready website for `draftychat.com`.
 
 ## Structure
-- `/` — main product website
-- `/blog/` — SEO blog index
-- `/privacy/` — Privacy Policy
-- `/terms/` — Terms of Use
-- `/404.html` — branded not-found page
-- `/sitemap.xml` and `/robots.txt` — search-engine discovery
+- `/` - main product website
+- `/blog/` - SEO blog index
+- `/privacy/` - Privacy Policy
+- `/terms/` - Terms of Use
+- `/404.html` - branded not-found page
+- `/sitemap.xml` and `/robots.txt` - search-engine discovery
 
 ## Deployment
 This package is ready for GitHub Pages at the custom domain `draftychat.com`. `CNAME` and `.nojekyll` are already included.
